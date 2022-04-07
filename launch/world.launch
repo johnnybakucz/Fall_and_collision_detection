@@ -3,7 +3,7 @@
 <launch>
 
   <!-- World File -->
-  <arg name="world_file" default="$(find fall_and_collision_detection)/worlds/world.world"/>
+  <arg name="world_file" default="$(find Fall_and_collision_detection)/worlds/world.world"/>
 
   <!-- Launch Gazebo World -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">

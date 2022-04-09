@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  <!-- RViz config file -->
+  <arg name="rvizconfig" default="$(find fall_and_collision_detection)/rviz/bot.rviz" />
+  <arg name="model" default="$(find fall_and_collision_detection)/urdf/bot.xacro"/>
+
+  <!-- Robot pose -->
+  <!-- Inititalize it's position in the desired location inside the world -->
+  <arg name="x" default="2.5"/>
+  <arg name="y" default="-1.5"/>
+  <arg name="z" default="0.2"/>
+  <arg name="roll" default="0"/>
+  <arg name="pitch" default="0"/>
+  <arg name="yaw" default="0"/>
+
+  <!-- Launch our Gazebo world -->
+  <include file="$(find fall_and_collision_detection)/launch/world.launch"/>
+
+  <!-- Find mogi_bot description and send urdf to param server -->
+  <param name="robot_description" command="$(find xacro)/xacro $(arg model)" />
+
+  <!-- Send joint values-->
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+    <param name="use_gui" value="false"/>
+  </node>
+
+  <!-- Send robot states to tf -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen"/>
+
+  <!-- Spawn mogi_bot -->
+  <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen" 
+    args="-urdf -param robot_description -model bot 
+            -x $(arg x) -y $(arg y) -z $(arg z)
+            -R $(arg roll) -P $(arg pitch) -Y $(arg yaw)"/>
+
+  <!-- Launch RViz -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
+
+  <!-- Launch trajectory server -->
+  <node pkg="hector_trajectory_server" type="hector_trajectory_server" respawn="false" name="hector_trajectory_server" output="screen">
+    <param name="source_frame_name" value="base_footprint"/>
+    <param name="target_frame_name" value="odom"/>
+  </node>
+
+</launch>

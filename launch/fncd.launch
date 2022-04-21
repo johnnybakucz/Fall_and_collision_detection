@@ -3,7 +3,7 @@
 <launch>
 
   <!-- RViz config file -->
-  <arg name="rvizconfig" default="$(find bme_gazebo_basics)/rviz/mogi_world.rviz" />
+  <arg name="rvizconfig" default="$(find fall_and_collision_detection)/rviz/bot.rviz" />
   <arg name="model" default="$(find fall_and_collision_detection)/urdf/bot.xacro"/>
 
   <!-- Robot pose -->

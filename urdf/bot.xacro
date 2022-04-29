@@ -10,7 +10,7 @@
 <child link="base_link" />
 </joint>
 
- <link name='base_link'>
+<link name='base_link'>
 <pose>0 0 0.1 0 0 0</pose>
 
  <inertial>
@@ -159,4 +159,94 @@ izz="0.1"
 
   </link>
 
+
+  <!-- IR sensor 1 -->
+  <joint type="fixed" name="ir_front_joint">
+    <origin xyz="0.14 0 -0.030" rpy="0 1.56 0"/>
+    <child link="base_ir_front"/>
+    <parent link="base_link"/>
+    <axis xyz="1 0 0" rpy="0 0 0"/>
+  </joint>
+
+ 
+  <link name="base_ir_front">
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.01 0.01 0.01"/>
+      </geometry>
+      <material name="green"/>
+    </visual>
+    <inertial>
+      <mass value="1e-5" />
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0"      izz="1e-6" />
+    </inertial>
+  </link>
+
+  <!-- IR sensor 2 -->
+  <joint type="fixed" name="ir_left_joint">
+    <origin xyz="0.0 -0.14 -0.030" rpy="0 1.56 0"/>
+    <child link="base_ir_left"/>
+    <parent link="base_link"/>
+    <axis xyz="1 0 0" rpy="0 0 0"/>
+  </joint>
+
+ 
+  <link name="base_ir_left">
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.01 0.01 0.01"/>
+      </geometry>
+      <material name="green"/>
+    </visual>
+    <inertial>
+      <mass value="1e-5" />
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0"      izz="1e-6" />
+    </inertial>
+  </link>
+
+    <!-- IR sensor 3 -->
+  <joint type="fixed" name="ir_right_joint">
+    <origin xyz="0.0 0.14 -0.030" rpy="0 1.56 0"/>
+    <child link="base_ir_right"/>
+    <parent link="base_link"/>
+    <axis xyz="1 0 0" rpy="0 0 0"/>
+  </joint>
+
+ 
+  <link name="base_ir_right">
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.01 0.01 0.01"/>
+      </geometry>
+      <material name="green"/>
+    </visual>
+    <inertial>
+      <mass value="1e-5" />
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0"      izz="1e-6" />
+    </inertial>
+  </link>
 </robot>

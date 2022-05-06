@@ -193,7 +193,7 @@ izz="0.1"
 
   <!-- IR sensor 1 -->
   <joint type="fixed" name="ir_front_joint">
-    <origin xyz="0.14 0 -0.030" rpy="0 1.56 0"/>
+    <origin xyz="0.14 0 -0.05" rpy="0 1.56 0"/>
     <child link="base_ir_front"/>
     <parent link="base_link"/>
     <axis xyz="1 0 0" rpy="0 0 0"/>
@@ -222,7 +222,7 @@ izz="0.1"
 
   <!-- IR sensor 2 -->
   <joint type="fixed" name="ir_left_joint">
-    <origin xyz="0.0 -0.14 -0.030" rpy="0 1.56 0"/>
+    <origin xyz="0.0 -0.14 -0.05" rpy="0 1.56 0"/>
     <child link="base_ir_left"/>
     <parent link="base_link"/>
     <axis xyz="1 0 0" rpy="0 0 0"/>
@@ -251,7 +251,7 @@ izz="0.1"
 
     <!-- IR sensor 3 -->
   <joint type="fixed" name="ir_right_joint">
-    <origin xyz="0.0 0.14 -0.030" rpy="0 1.56 0"/>
+    <origin xyz="0.0 0.14 -0.05" rpy="0 1.56 0"/>
     <child link="base_ir_right"/>
     <parent link="base_link"/>
     <axis xyz="1 0 0" rpy="0 0 0"/>

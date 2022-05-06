@@ -40,28 +40,28 @@ izz="0.1"
  <collision name='caster_collision'>
 <origin xyz="-0.1 0 -0.05" rpy="0 0 0"/>
 <geometry>
-<sphere radius="0.02"/>
+<sphere radius="0.0245"/>
 </geometry>
 </collision>
 
  <visual name='caster_visual'>
 <origin xyz="-0.1 0 -0.05" rpy="0 0 0"/>
 <geometry>
-<sphere radius="0.02"/>
+<sphere radius="0.0245"/>
 </geometry>
 </visual>
 
 <collision name='caster2_collision'>
   <origin xyz="0.1 0 -0.05" rpy="0 0 0"/>
   <geometry>
-  <sphere radius="0.02"/>
+  <sphere radius="0.0245"/>
   </geometry>
   </collision>
   
    <visual name='caster2_visual'>
   <origin xyz="0.1 0 -0.05" rpy="0 0 0"/>
   <geometry>
-  <sphere radius="0.02"/>
+  <sphere radius="0.0245"/>
   </geometry>
   </visual>
 

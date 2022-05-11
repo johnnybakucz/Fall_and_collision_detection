@@ -78,14 +78,11 @@ izz="0.1"
     <sphere radius="0.01"/>
     </geometry>
     </visual>
-  
-  
-
 
  </link>
 
  <joint type="continuous" name="left_wheel_joint">
-    <origin xyz="0.00 0.1 -0.05" rpy="0 0 0"/>
+    <origin xyz="0.00 0.08 -0.05" rpy="0 0 0"/>
     <child link="left_wheel"/>
     <parent link="base_link"/>
     <axis xyz="0 1 0" rpy="0 0 0"/>
@@ -120,7 +117,7 @@ izz="0.1"
   </link>
 
   <joint type="continuous" name="right_wheel_joint">
-    <origin xyz="0.00 -0.1 -0.05" rpy="0 0 0"/>
+    <origin xyz="0.00 -0.08 -0.05" rpy="0 0 0"/>
     <child link="right_wheel"/>
     <parent link="base_link"/>
     <axis xyz="0 1 0" rpy="0 0 0"/>
@@ -156,7 +153,7 @@ izz="0.1"
 
   <!-- Lidar -->
   <joint type="fixed" name="scan_joint">
-    <origin xyz="0.0 0 0.05" rpy="0 0 0"/>
+    <origin xyz="0.0 0 0.03" rpy="0 0 0"/>
     <child link="scan_link"/>
     <parent link="base_link"/>
     <axis xyz="0 1 0" rpy="0 0 0"/>

@@ -23,7 +23,7 @@ izz="0.1"
 />
 </inertial>
 
- <collision name='base_collision'>
+<collision name='base_collision'>
 <origin xyz="0 0 -0.025" rpy="0 0 0"/>
 <geometry>
 <cylinder radius="0.15" length=".05"/>

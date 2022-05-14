@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<launch>
+
+	<param name="use_sim_time" value="false" />
+
+	<!-- publish static transform between map and odom -->
+	<node pkg="tf" type="static_transform_publisher" name="fixed_map" args="0 0 0 0 0 0 /map /odom 100" /> 
+
+	<!-- map publisher node -->
+	<param name="occupancy_rate" value="15" />    <!-- Hz -->
+	<param name="grid_resolution" value="0.025" />
+	<param name="grid_width" value="800" />
+	<param name="grid_height" value="800" />
+	<node pkg="fall_and_collision_detection" type="mapping.py" name="map_publisher" output="screen" />
+
+</launch>

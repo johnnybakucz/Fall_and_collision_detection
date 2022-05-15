@@ -52,20 +52,13 @@ if __name__ == '__main__':
 
     while not rospy.is_shutdown():
         
-		# build ros map message and publish
-        print(len(map_msg_map.data))
-        print(len(map_msg_gmap.data))
+		# merge map messages and publish
         if (len(map_msg_gmap.data) !=0 ): 
             for i in range(len(map_msg_map.data)):
                 if (map_msg_gmap.data[i] > map_msg_map.data[i]):
-                    #print(map_msg_gmap.data[i])
-                    #merged_map.data.append(map_msg_gmap.data[i])
                     merged_map.data[i]=map_msg_gmap.data[i]
                 else: 
-                    #print(map_msg_map.data[i])
-                    #merged_map.data.append(map_msg_map.data[i])
                     merged_map.data[i]=map_msg_map.data[i]
             merge_pub.publish(merged_map)
-            print("Published")
         
         rate.sleep() # Sleeps for 1/rate sec 

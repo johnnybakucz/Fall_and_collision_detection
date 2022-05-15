@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- Launch gmapping -->
+  <include file="$(find fall_and_collision_detection)/launch/gmapping.launch"/>
+
+  <!-- Launch range_mapping -->
+  <include file="$(find fall_and_collision_detection)/launch/range_mapping.launch"/>
+
+  <!-- Launch merge_maps -->
+  <include file="$(find fall_and_collision_detection)/launch/merge_maps.launch"/>
+
+</launch>

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+
+	<!-- random_move node -->
+	<node pkg="fall_and_collision_detection" type="random_move.py" name="random_move_publisher" output="screen" />
+
+</launch>

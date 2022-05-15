@@ -2,7 +2,7 @@
 <launch>
 
   <!-- Ground truth map file -->
-  <arg name="map_file" default="$(find fall_and_collision_detection)/maps/map.yaml"/>
+  <arg name="map_file" default="$(find fall_and_collision_detection)/maps/map.yaml"/>  
 
   <node pkg="gmapping" type="slam_gmapping" name="gmapping" output="screen" >
     <param name="odom_frame" value="odom" />

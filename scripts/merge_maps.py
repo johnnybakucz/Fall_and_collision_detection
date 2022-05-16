@@ -53,7 +53,7 @@ if __name__ == '__main__':
     while not rospy.is_shutdown():
         
 		# merge map messages and publish
-        if (len(map_msg_gmap.data) !=0 ): 
+        if ((len(map_msg_gmap.data) !=0) and (len(map_msg_map.data) !=0)): 
             for i in range(len(map_msg_map.data)):
                 if (map_msg_gmap.data[i] > map_msg_map.data[i]):
                     merged_map.data[i]=map_msg_gmap.data[i]

@@ -2,7 +2,7 @@
 <launch>
 
   <!-- Ground truth map file -->
-  <arg name="map_file" default="$(find fall_and_collision_detection)/maps/map.yaml"/>  
+  <!-- <arg name="map_file" default="$(find fall_and_collision_detection)/maps/map.yaml"/>    -->
 
   <node pkg="gmapping" type="slam_gmapping" name="gmapping" output="screen" >
     <param name="odom_frame" value="odom" />
@@ -56,9 +56,9 @@
     <param name="lasamplestep" value="0.005"/>
   </node> 
 
-  <!-- Ground truth map Server -->
+  <!-- Ground truth map Server
   <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)">
     <remap from="map" to="map_groundtruth"/>
-  </node>
+  </node>  -->
 
 </launch>

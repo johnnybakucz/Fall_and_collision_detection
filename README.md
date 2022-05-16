@@ -53,7 +53,7 @@ while True:
     
     turn_random_angle()
 ```
-
+ 
 ## Eredmények
 
 ## 12. hét

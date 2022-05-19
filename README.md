@@ -64,7 +64,7 @@ A távolságszenzor alapján történő térképalkotásra magunknak kellett meg
 
 Ha megvan a két térkép, össze kell őket illeszteni. Az OccupancyGrid tulajdonságai miatt azt a megoldást választottuk, hogy a térkép minden mezőjén végigmegyünk, és a két értéket összehasonlítjuk és mindig a nagyobb értéket írjuk be a közös térképbe, ezzel biztosítva, hogy az összes akadály bekerül. Ezt a merge_maps.py valósítja meg és az all_mapping.launch fájllal mindhárom térképező node elindítható. A működését az alábbi ábra mutatja: 
 
-![merge_map](./assets/figures/merge_map.png "A picture of the merge_maps")
+![merge_map](./assets/figures/merge_maps.png "A picture of the merge_maps")
  
 ## Eredmények
 

@@ -71,3 +71,7 @@ Ha megvan a két térkép, össze kell őket illeszteni. Az OccupancyGrid tulajd
 
 A készített node-okkal sikerült a feladatkírás minden pontjának eleget tenni, sikerült egy, akár újrahasználható projektet létrehozni. A projektünk rqt_graph-ja az alábbi ábrán látható. 
 ![rosgraph](./assets/figures/rosgraph.png "A picture of the rqt_graph")
+
+<figure class="video_container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/d7yEBOIkYtg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</figure>

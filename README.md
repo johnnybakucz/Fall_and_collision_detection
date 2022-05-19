@@ -36,6 +36,7 @@ A feladat megvalósításához létrehoztunk egy saját világot, ahol számos k
 Robotunk geometriája egy hétköznapi robotporszívóra emlékeztet. Egy Z tengely mentén kihúzott lapos henger az alján az X tengelyen két kerékkel, melyeket differenciálisan hajtunk, illetve az Y tengelyre rögzített kettő darab szabadonfutó kerékkel, melyek a robot stabilitásáért felelősek, azonban nincsenek meghajtva. 
 
 ![bot](./assets/figures/bot.png " A figure of the bot modell")
+![bot](./assets/figures/rviz.png)    
 
 ## Szenzorok 
 A környezet érzékelésének érdekében a robotunk tetején, középen egy Lidar szenzort helyeztünk el, mely XY síkban pásztázza a környezetet, majd a visszaverődő lézerfényből távolságot számol és megadja a tereptárgyak illetve az érzékelő közötti távolságot. 

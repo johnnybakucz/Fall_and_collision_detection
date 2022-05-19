@@ -185,8 +185,7 @@
     <visual name='scan_link_visual'>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <!--  TODO : use own mesh instead-->
-        <mesh filename = "package://bme_gazebo_sensors/meshes/lidar.dae"/>
+        <mesh filename = "package://fall_and_collision_detection/meshes/lidar.dae"/>
       </geometry>
     </visual>
 

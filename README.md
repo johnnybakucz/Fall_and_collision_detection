@@ -36,6 +36,7 @@ A feladat megvalósításához létrehoztunk egy saját világot, ahol számos k
 Robotunk geometriája egy hétköznapi robotporszívóra emlékeztet. Egy Z tengely mentén kihúzott lapos henger az alján az X tengelyen két kerékkel, melyeket differenciálisan hajtunk, illetve az Y tengelyre rögzített kettő darab szabadonfutó kerékkel, melyek a robot stabilitásáért felelősek, azonban nincsenek meghajtva. 
 
 ![bot](./assets/figures/bot.png " A figure of the bot modell")
+![bot](./assets/figures/rviz.png)    
 
 ## Szenzorok 
 A környezet érzékelésének érdekében a robotunk tetején, középen egy Lidar szenzort helyeztünk el, mely XY síkban pásztázza a környezetet, majd a visszaverődő lézerfényből távolságot számol és megadja a tereptárgyak illetve az érzékelő közötti távolságot. 
@@ -70,3 +71,6 @@ Ha megvan a két térkép, össze kell őket illeszteni. Az OccupancyGrid tulajd
 
 A készített node-okkal sikerült a feladatkírás minden pontjának eleget tenni, sikerült egy, akár újrahasználható projektet létrehozni. A projektünk rqt_graph-ja az alábbi ábrán látható. 
 ![rosgraph](./assets/figures/rosgraph.png "A picture of the rqt_graph")
+
+## Videó a működésről
+<a href="https://youtu.be/d7yEBOIkYtg"><img width="700" src="./assets/figures/thumbanil.png"></a>

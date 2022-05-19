@@ -7,6 +7,11 @@
 3. [Megvalósítás](#Megvalósítás)
 4. [Eredmények](#Eredmények)
 
+Résztvevők:
+- Dénes Péter
+- Mészáros Sándor Máté
+- Bakucz Jonatán Márk
+
 # Bevezető
 
 A mai modern háztartásokban egyre népszerűbbek a különböző háztartási robotok, például robotporszívók. Ezeknél különösen fontos, hogy a "terepviszonyokat" felismerjék, a bútoroknak és egyéb környezeti elemeknek ne ütközzenek neki, illetve a lépcsőn se guruljanak le. Ennek elkerülése érdekében a robot szenzorokkal rendelkezik, melyeknek jelei alapján a beépített számítógép tudja irányítani a robot mozgását.

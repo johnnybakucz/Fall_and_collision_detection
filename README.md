@@ -73,4 +73,4 @@ A készített node-okkal sikerült a feladatkírás minden pontjának eleget ten
 ![rosgraph](./assets/figures/rosgraph.png "A picture of the rqt_graph")
 
 ## Videó a működésről
-[![video](./assets/figures/thumbanil.png)](https://www.youtube.com/embed/d7yEBOIkYtg)
+<a href="https://youtu.be/d7yEBOIkYtg"><img width="700" src="./assets/figures/thumbanil.png"></a>

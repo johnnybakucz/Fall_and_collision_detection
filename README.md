@@ -1,3 +1,4 @@
+![header](./assets/figures/bme_logo_nagy.jpg "BME logo")
 # Környezet felderítése leesésszenzor és ütközésszenzor segítségével
 
 ## Table of contents
@@ -32,6 +33,21 @@ A projekthez a következő csomagok telepítése szükséges:
 * ros-noetic-map-server
 * ros-noetic-gmapping
 
+## Működtetés
+
+A felsorolt csomagok installálása után az olvasó is kipróbálhatja a projekt működését.
+Ehhez több terminál ablakra van szükségünk, melybe a catkin_ws mappába történő belépés után a következő parancsokat kell lefuttatnunk:
+
+* roslaunch fall-and-collision-detection spawn.launch 
+* roslaunch fall-and-collision-detection random_move.launch
+* roslaunch fall-and-collision-detection all_mapping.launch
+
+Amennyiben az indítás során hiba lépne fel, érdemes megpróbálni az alábbi lépéseket:
+
+* catkin_ws mappában "catkin_make" parancs illetve "source devel/setup.bash" parancs
+* scripts mappában "chmod +x * ". (A csillag a mappában lévő összes fájlt jelöli, így nem kell külön megnevezni őket.  ) 
+
+
 ## A világ
 A feladat megvalósításához létrehoztunk egy saját világot, ahol számos kihívás éri a robotot a térkép elkészítése során. Vannak különböző akadályok elhelyezve a térben, illetve le is eshet a "szakadékba".
 ![world_perspective](./assets/figures/world_perspective.png "A picture of the world in perspective view")
@@ -41,7 +57,7 @@ A feladat megvalósításához létrehoztunk egy saját világot, ahol számos k
 Robotunk geometriája egy hétköznapi robotporszívóra emlékeztet. Egy Z tengely mentén kihúzott lapos henger az alján az X tengelyen két kerékkel, melyeket differenciálisan hajtunk, illetve az Y tengelyre rögzített kettő darab szabadonfutó kerékkel, melyek a robot stabilitásáért felelősek, azonban nincsenek meghajtva. 
 
 ![bot](./assets/figures/bot.png " A figure of the bot modell")
-![bot](./assets/figures/rviz.png)    
+![bot](./assets/figures/rviz.png " A figure of the bot modell with custom meshes" )    
 
 ## Szenzorok 
 A környezet érzékelésének érdekében a robotunk tetején, középen egy Lidar szenzort helyeztünk el, mely XY síkban pásztázza a környezetet, majd a visszaverődő lézerfényből távolságot számol és megadja a tereptárgyak illetve az érzékelő közötti távolságot. 
